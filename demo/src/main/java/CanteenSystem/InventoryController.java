@@ -30,14 +30,7 @@ public class InventoryController {
 
         return "canteensystemWeb/forms/New_Product";
     }
-    @RequestMapping("/edit/{id}")
-    public ModelAndView showEditProductPage(@PathVariable(name = "id") int id) {
-        ModelAndView mav = new ModelAndView("edit_product");
-        Inventory product = service.get(id);
-        mav.addObject("product", product);
-
-        return mav;
-    }
+    
 
     }
 
