@@ -3,7 +3,11 @@ package CanteenSystem;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user")
+<<<<<<< HEAD
+@Table(name  = "user")
+=======
+
+>>>>>>> 3eb99c0bd13df64a441f360c7f8926ee9a0e14c4
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

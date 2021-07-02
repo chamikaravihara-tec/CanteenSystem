@@ -8,6 +8,8 @@ import java.security.PrivateKey;
 
 @Entity
 public class FoodItem {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long Food_id;
     private long Item_id;
     private String Food_name;
@@ -17,14 +19,6 @@ public class FoodItem {
     private float Price;
     private String Meal_time;
     private String image;
-
-    protected FoodItem() {
-    }
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long getId() {
-        return Food_id;
-    }
 
     public long getFood_id() {
         return Food_id;
