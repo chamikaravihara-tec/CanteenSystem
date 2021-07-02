@@ -1,29 +1,15 @@
 package CanteenSystem;
 
 import javax.persistence.Entity;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
->>>>>>> 3eb99c0bd13df64a441f360c7f8926ee9a0e14c4
-=======
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
->>>>>>> 3eb99c0bd13df64a441f360c7f8926ee9a0e14c4
 import javax.persistence.Id;
 
 @Entity
 public class Invoice{
     @Id
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 3eb99c0bd13df64a441f360c7f8926ee9a0e14c4
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
->>>>>>> 3eb99c0bd13df64a441f360c7f8926ee9a0e14c4
     private long invoice_id;
     private long user_id;
     private long food_id;
