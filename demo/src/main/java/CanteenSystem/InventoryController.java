@@ -15,6 +15,8 @@ public class InventoryController {
     @Autowired
     private InventoryService service;
 
+
+
     @RequestMapping("/")
     public String viewHomePage(Model model) {
         List<Inventory> listProducts = service.listAll();
@@ -30,7 +32,7 @@ public class InventoryController {
 
         return "canteensystemWeb/forms/New_Product";
     }
-    
+
 
     }
 
