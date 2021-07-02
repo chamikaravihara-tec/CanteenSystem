@@ -3,6 +3,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -19,21 +20,23 @@ public class InventoryController {
         List<Inventory> listProducts = service.listAll();
         model.addAttribute("listProducts", listProducts);
 
-        return "index";
+        return "canteensystemWeb/forms/index";
     }
 
-    @RequestMapping("/new")
+    @RequestMapping(value = "/new",method = RequestMethod.POST)
     public String showNewProductPage(Model model) {
         Inventory product = new Inventory();
         model.addAttribute("product", product);
 
-        return "new_product";
+        return "canteensystemWeb/forms/New_Product";
     }
-    @RequestMapping(value = "/edit", method = RequestMethod.POST)
-    public String editProduct(@ModelAttribute("product") Inventory product) {
+    @RequestMapping("/edit/{id}")
+    public ModelAndView showEditProductPage(@PathVariable(name = "id") int id) {
+        ModelAndView mav = new ModelAndView("edit_product");
+        Inventory product = service.get(id);
+        mav.addObject("product", product);
 
-
-        return "Edit_Product";
+        return mav;
     }
 
     }
