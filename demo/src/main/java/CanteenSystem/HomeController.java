@@ -14,8 +14,11 @@ public class HomeController {
     {
         return "canteensystemWeb/index";
     }
+<<<<<<< HEAD
 
  
+=======
+>>>>>>> 3eb99c0bd13df64a441f360c7f8926ee9a0e14c4
 
 
 }

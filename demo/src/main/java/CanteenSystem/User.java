@@ -4,7 +4,11 @@ import javax.persistence.*;
 
 @Entity
 <<<<<<< HEAD
+<<<<<<< HEAD
 @Table(name  = "user")
+=======
+
+>>>>>>> 3eb99c0bd13df64a441f360c7f8926ee9a0e14c4
 =======
 
 >>>>>>> 3eb99c0bd13df64a441f360c7f8926ee9a0e14c4
