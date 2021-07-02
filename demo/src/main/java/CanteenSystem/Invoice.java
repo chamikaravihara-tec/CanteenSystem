@@ -1,9 +1,14 @@
 package CanteenSystem;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Invoice{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private long invoice_id;
     private long user_id;

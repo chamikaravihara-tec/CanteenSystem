@@ -8,6 +8,8 @@ import javax.persistence.Id;
 
     @Entity
     public class Inventory {
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long product_id;
         private String product_name;
         private String quantity;
@@ -20,11 +22,6 @@ import javax.persistence.Id;
 
 
 
-        protected Inventory() {
-        }
-
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
         public Long getId() {
             return product_id;
         }
