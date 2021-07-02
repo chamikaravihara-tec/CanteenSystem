@@ -16,6 +16,7 @@ public class FoodItem {
     private String Quantity;
     private float Price;
     private String Meal_time;
+    private String image;
 
     protected FoodItem() {
     }
@@ -87,5 +88,13 @@ public class FoodItem {
 
     public void setMeal_time(String meal_time) {
         Meal_time = meal_time;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
