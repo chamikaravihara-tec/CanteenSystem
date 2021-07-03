@@ -8,7 +8,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 
-    @RequestMapping(path = "/",method = RequestMethod.GET)
+   // @RequestMapping(path = "/",method = RequestMethod.GET)
+   // public String getIndex(Model model)
+  //  {
+      //  return "canteensystemWeb/index";
+   // }
+
+    @RequestMapping("/Login" )
+    public String getLogin(Model model)
+    {
+        return "canteensystemWeb/forms/Login";
+    }
+    @RequestMapping("/" )
     public String getIndex(Model model)
     {
         return "canteensystemWeb/index";

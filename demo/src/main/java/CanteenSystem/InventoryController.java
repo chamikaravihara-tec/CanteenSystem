@@ -2,8 +2,6 @@ package CanteenSystem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -17,21 +15,21 @@ public class InventoryController {
 
 
 
-    @RequestMapping("/")
-    public String viewHomePage(Model model) {
-        List<Inventory> listProducts = service.listAll();
-        model.addAttribute("listProducts", listProducts);
+    //@RequestMapping("/")
+    //public String viewHomePage(Model model) {
+       // List<Inventory> listProducts = service.listAll();
+        //model.addAttribute("listProducts", listProducts);
 
-        return "canteensystemWeb/forms/index";
-    }
+        //return "showinventory";
+    //}
 
-    @RequestMapping(value = "/new",method = RequestMethod.POST)
-    public String showNewProductPage(Model model) {
-        Inventory product = new Inventory();
-        model.addAttribute("product", product);
-
-        return "canteensystemWeb/forms/New_Product";
-    }
+    //@RequestMapping(value = "/new",method = RequestMethod.POST)
+    //public String showNewProductPage(Model model) {
+       // Inventory product = new Inventory();
+        //.addAttribute("product", product);
+//
+       // return "canteensystemWeb/forms/New_Product";
+    //}
 
 
     }

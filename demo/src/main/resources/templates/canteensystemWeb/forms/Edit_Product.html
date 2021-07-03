@@ -1,59 +1,63 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
-    <meta charset="utf-8" />
     <title>Edit Product</title>
 </head>
 <body>
-<div align="center">
-    <h1>Edit Product</h1>
-    <br />
-    <form action="#" th:action="@{/save}" th:object="${product}"
-          method="post">
+<form name="Edit Product" method="post">
+    <table width="40%" bgcolor="0099CC" align="center">
 
-        <table border="0" cellpadding="10">
-            <tr>
-                <td>Product ID:</td>
-                <td>
-                    <input type="text" th:field="*{id}" readonly="readonly" />
-                </td>
-            </tr>
-            <tr>
-                <td>Product Name:</td>
-                <td>
-                    <input type="text" th:field="*{name}" />
-                </td>
-            </tr>
-            <tr>
-                <td>Quantity:</td>
-                <td><input type="text" th:field="*{quantity}" /></td>
-            </tr>
-            <tr>
-                <td>Supplier Name:</td>
-                <td><input type="text" th:field="*{supplier_name}" /></td>
-            </tr>
-            <tr>
-                <td>Supply Date:</td>
-                <td><input type="text" th:field="*{supply_date}" /></td>
-            </tr>
-            <tr>
-                <td>Manufacture Date:</td>
-                <td><input type="text" th:field="*{manufacture_date}" /></td>
-            </tr>
-            <tr>
-                <td>Expire Date:</td>
-                <td><input type="text" th:field="*{expire_date}" /></td>
-            </tr>
-            <tr>
-                <td>Price:</td>
-                <td><input type="text" th:field="*{price}" /></td>
-            </tr>
-            <tr>
-                <td colspan="2"><button type="submit">Save</button> </td>
-            </tr>
-        </table>
-    </form>
-</div>
+        <tr>
+            <td colspan=2><center><font size=4><b>Edit Product Page</b></font></center></td>
+        </tr>
+
+        <tr>
+            <td>Product ID:</td>
+            <td><input type="text" size=25 name="id"></td>
+        </tr>
+
+        <tr>
+            <td>Product Name:</td>
+            <td><input type="text" size=25 name="name"></td>
+        </tr>
+
+        <tr>
+            <td>Quantity:</td>
+            <td><input type="text" size=25 name="quantity"></td>
+        </tr>
+
+        <tr>
+            <td>Supplier Name:</td>
+            <td><input type="text" size=25 name="supplier_name"></td>
+        </tr>
+
+        <tr>
+            <td>Supply Date:</td>
+            <td><input type="password" size=25 name="supply_date"></td>
+        </tr>
+
+        <tr>
+            <td>Manufacture Date:</td>
+            <td><input type="text" size=25 name="manufacture_date"></td>
+        </tr>
+
+        <tr>
+            <td>Expire Date:</td>
+            <td><input type="text" size=25 name="expire_date"></td>
+        </tr>
+
+        <tr>
+            <td>Price:</td>
+            <td><input type="text" size=25 name="price"></td>
+        </tr>
+
+        <tr>
+            <td ><input type="Reset"></td>
+            <td><input type="submit" onclick="return check(this.form)" value="Login"></td>
+        </tr>
+
+    </table>
+</form>
+
+
 </body>
 </html>

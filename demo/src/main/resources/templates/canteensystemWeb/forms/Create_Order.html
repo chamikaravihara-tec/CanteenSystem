@@ -1,44 +1,45 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
-    <meta charset="utf-8" />
-    <title>Create Order</title>
+    <title>Create New Order</title>
 </head>
 <body>
-<div align="center">
-    <h1>Create Order</h1>
-    <br />
-    <form action="#" th:action="@{/save}" th:object="${product}"
-          method="post">
+<form name="Create New Order" method="post">
+    <table width="40%" bgcolor="0099CC" align="center">
 
-        <table border="0" cellpadding="10">
-            <tr>
-                <td>Order Id:</td>
-                <td>
-                    <input type="text" th:field="*{order_id}" readonly="readonly" />
-                </td>
-            </tr>
-            <tr>
-                <td>User Id:</td>
-                <td>
-                    <input type="text" th:field="*{user_id}" />
-                </td>
-            </tr>
-            <tr>
-                <td>Order Date:</td>
-                <td><input type="text" th:field="*{order_date}" /></td>
-            </tr>
-            <tr>
-                <td>Order Time:</td>
-                <td><input type="text" th:field="*{order_time}" /></td>
-            </tr>
+        <tr>
+            <td colspan=2><center><font size=4><b>Create New Order</b></font></center></td>
+        </tr>
 
-            <tr>
-                <td colspan="2"><button type="submit">Save</button> </td>
-            </tr>
-        </table>
-    </form>
-</div>
+        <tr>
+            <td>Order ID:</td>
+            <td><input type="text" size=25 name="order_id"></td>
+        </tr>
+
+        <tr>
+            <td>User Id:</td>
+            <td><input type="text" size=25 name="user_id"></td>
+        </tr>
+
+        <tr>
+            <td>Order Date:</td>
+            <td><input type="text" size=25 name="order_date"></td>
+        </tr>
+
+        <tr>
+            <td>Order Time:</td>
+            <td><input type="text" size=25 name="order_time"></td>
+        </tr>
+
+
+
+        <tr>
+            <td ><input type="Reset"></td>
+            <td><input type="submit" onclick="return check(this.form)" value="Login"></td>
+        </tr>
+
+    </table>
+</form>
+
+
 </body>
 </html>
