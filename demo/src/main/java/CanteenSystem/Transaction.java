@@ -12,7 +12,7 @@ public class Transaction {
     private int transaction_id;
     private int order_id;
     private long user_id;
-    private long intem_id;
+    private long item_id;
     private double transaction_date;
     private float order_amount;
 
@@ -40,12 +40,12 @@ public class Transaction {
         this.user_id = user_id;
     }
 
-    public long getIntem_id() {
-        return intem_id;
+    public long getItem_id() {
+        return item_id;
     }
 
-    public void setIntem_id(long intem_id) {
-        this.intem_id = intem_id;
+    public void setItem_id(long item_id) {
+        this.item_id = item_id;
     }
 
     public double getTransaction_date() {
