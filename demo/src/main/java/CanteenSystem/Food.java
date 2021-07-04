@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.security.PrivateKey;
+import java.sql.Blob;
 import java.sql.Time;
 
 @Entity
@@ -19,6 +20,7 @@ public class Food {
     private Integer quantity;
     private Double price;
     private Time meal_time;
+    private Blob image;
 
     public String getFoods_id() {
         return foods_id;
@@ -82,5 +84,13 @@ public class Food {
 
     public void setMeal_time(Time meal_time) {
         this.meal_time = meal_time;
+    }
+
+    public Blob getImage() {
+        return image;
+    }
+
+    public void setImage(Blob image) {
+        this.image = image;
     }
 }

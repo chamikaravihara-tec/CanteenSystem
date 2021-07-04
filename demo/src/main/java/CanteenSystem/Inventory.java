@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.xml.crypto.Data;
 import java.math.BigInteger;
+import java.sql.Blob;
 import java.util.Date;
 
 
@@ -22,6 +23,7 @@ import java.util.Date;
         private Date supply_date;
         private Date manufactured_date;
         private String product_name;
+        private Blob image;
 
     public String getIntem_id() {
         return intem_id;
@@ -93,6 +95,14 @@ import java.util.Date;
 
     public void setProduct_name(String product_name) {
         this.product_name = product_name;
+    }
+
+    public Blob getImage() {
+        return image;
+    }
+
+    public void setImage(Blob image) {
+        this.image = image;
     }
 }
 
