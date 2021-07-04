@@ -81,7 +81,6 @@ import java.util.Date;
         this.supply_date = supply_date;
     }
 
-<<<<<<< HEAD
     public Date getManufactured_date() {
         return manufactured_date;
     }
@@ -101,11 +100,6 @@ import java.util.Date;
     public Blob getImage() {
         return image;
     }
-=======
-        public String getImage() {
-            return image;
-        }
->>>>>>> 67ac3bc6c37c55583cb88a989afd30a288265056
 
     public void setImage(Blob image) {
         this.image = image;

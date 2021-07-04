@@ -10,20 +10,11 @@ import java.util.Date;
 public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-<<<<<<< HEAD
     private Integer transaction_id;
     private Integer order_id;
     private String intem_id;
     private Date transaction_date;
     private Float order_amount;
-=======
-    private int transaction_id;
-    private int order_id;
-    private long user_id;
-    private long item_id;
-    private double transaction_date;
-    private float order_amount;
->>>>>>> 67ac3bc6c37c55583cb88a989afd30a288265056
 
     public Integer getTransaction_id() {
         return transaction_id;
@@ -41,29 +32,12 @@ public class Transaction {
         this.order_id = order_id;
     }
 
-<<<<<<< HEAD
     public String getIntem_id() {
         return intem_id;
     }
 
     public void setIntem_id(String intem_id) {
         this.intem_id = intem_id;
-=======
-    public long getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(long user_id) {
-        this.user_id = user_id;
-    }
-
-    public long getItem_id() {
-        return item_id;
-    }
-
-    public void setItem_id(long item_id) {
-        this.item_id = item_id;
->>>>>>> 67ac3bc6c37c55583cb88a989afd30a288265056
     }
 
     public Date getTransaction_date() {
