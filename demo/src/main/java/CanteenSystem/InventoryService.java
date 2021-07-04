@@ -19,11 +19,11 @@ public class InventoryService {
         repo.save(product);
     }
 
-    public Inventory get(long id) {
+    public Inventory get(String id) {
         return repo.findById(id).get();
     }
 
-    public void delete(long id) {
+    public void delete(String id) {
         repo.deleteById(id);
     }
 }

@@ -12,19 +12,19 @@ public class FoodItemService {
     @Autowired
     private FoodItemRepository repo;
 
-    public List<FoodItem> listAll() {
+    public List<Food> listAll() {
         return repo.findAll();
     }
 
-    public void save(FoodItem foodItem) {
+    public void save(Food foodItem) {
         repo.save(foodItem);
     }
 
-    public FoodItem get(long id) {
+    public Food get(String id) {
         return repo.findById(id).get();
     }
 
-    public void delete(long id) {
+    public void delete(String id) {
         repo.deleteById(id);
     }
 }

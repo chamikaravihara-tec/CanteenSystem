@@ -12,19 +12,19 @@ public class OrderService {
     @Autowired
     private OrderRepository repo;
 
-    public List<Order> listAll() {
+    public List<orders> listAll() {
         return repo.findAll();
     }
 
-    public void save(Order order) {
+    public void save(orders order) {
         repo.save(order);
     }
 
-    public Order get(long id) {
+    public orders get(String id) {
         return repo.findById(id).get();
     }
 
-    public void delete(long id) {
+    public void delete(String id) {
         repo.deleteById(id);
     }
 }

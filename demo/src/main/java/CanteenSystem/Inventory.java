@@ -4,110 +4,95 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.xml.crypto.Data;
+import java.math.BigInteger;
+import java.util.Date;
 
 
-    @Entity
+@Entity
     public class Inventory {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long product_id;
-        private String product_name;
-        private String quantity;
+        private String intem_id;
+        private String item_name;
+        private Integer quantity;
+        private Double price;
+        private Date expired_date;
         private String supplier_name;
-        private double supply_date;
-        private double manufacture_date;
-        private double expire_date;
-        private float price;
-        private String image;
+        private Date supply_date;
+        private Date manufactured_date;
+        private String product_name;
 
-
-
-        public Long getId() {
-            return product_id;
-        }
-
-        public void setId(Long id) {
-            this.product_id = id;
-        }
-
-        public String getName() {
-            return product_name;
-        }
-
-        public void setName(String name) {
-            this.product_name = name;
-        }
-
-        public String getQuantity() {
-            return quantity;
-        }
-
-        public void setQuantity(String quantity) {
-            this.quantity = quantity;
-        }
-
-        public String getSupplier_name() {
-            return supplier_name;
-        }
-
-        public void setSupplier_name(String supplier_name) {
-            this.supplier_name = supplier_name;
-        }
-
-        public double getSupply_date() {
-            return supply_date;
-        }
-
-        public void setSupply_date(double supply_date) {
-            this.supply_date = supply_date;
-        }
-
-        public double getManufacture_date() {
-            return manufacture_date;
-        }
-
-        public void setManufacture_date(double manufacture_date) {
-            this.manufacture_date = manufacture_date;
-        }
-
-        public double getExpire_date() {
-            return expire_date;
-        }
-
-        public void setExpire_date(double expire_date) {
-            this.expire_date = expire_date;
-        }
-
-        public float getPrice() {
-            return price;
-        }
-
-        public void setPrice(float price) {
-            this.price = price;
-        }
-
-        public Long getProduct_id() {
-            return product_id;
-        }
-
-        public void setProduct_id(Long product_id) {
-            this.product_id = product_id;
-        }
-
-        public String getProduct_name() {
-            return product_name;
-        }
-
-        public void setProduct_name(String product_name) {
-            this.product_name = product_name;
-        }
-
-        public String getImage() {
-            return image;
-        }
-
-        public void setImage(String image) {
-            this.image = image;
-        }
+    public String getIntem_id() {
+        return intem_id;
     }
+
+    public void setIntem_id(String intem_id) {
+        this.intem_id = intem_id;
+    }
+
+    public String getItem_name() {
+        return item_name;
+    }
+
+    public void setItem_name(String item_name) {
+        this.item_name = item_name;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public Date getExpired_date() {
+        return expired_date;
+    }
+
+    public void setExpired_date(Date expired_date) {
+        this.expired_date = expired_date;
+    }
+
+    public String getSupplier_name() {
+        return supplier_name;
+    }
+
+    public void setSupplier_name(String supplier_name) {
+        this.supplier_name = supplier_name;
+    }
+
+    public Date getSupply_date() {
+        return supply_date;
+    }
+
+    public void setSupply_date(Date supply_date) {
+        this.supply_date = supply_date;
+    }
+
+    public Date getManufactured_date() {
+        return manufactured_date;
+    }
+
+    public void setManufactured_date(Date manufactured_date) {
+        this.manufactured_date = manufactured_date;
+    }
+
+    public String getProduct_name() {
+        return product_name;
+    }
+
+    public void setProduct_name(String product_name) {
+        this.product_name = product_name;
+    }
+}
 

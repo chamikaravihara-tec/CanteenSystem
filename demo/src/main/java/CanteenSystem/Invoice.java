@@ -4,55 +4,65 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.sql.Time;
+import java.util.Date;
 
 @Entity
 public class Invoice{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String invoice_id;
+    private String user_id;
+    private String food_id;
+    private Date invoice_date;
+    private Time invoice_time;
+    private Double total;
 
-    private long invoice_id;
-    private long user_id;
-    private long food_id;
-    private double invoice_date;
-    private double invoice_time;
-
-    public long getInvoice_id() {
+    public String getInvoice_id() {
         return invoice_id;
     }
 
-    public void setInvoice_id(long invoice_id) {
+    public void setInvoice_id(String invoice_id) {
         this.invoice_id = invoice_id;
     }
 
-    public long getUser_id() {
+    public String getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(long user_id) {
+    public void setUser_id(String user_id) {
         this.user_id = user_id;
     }
 
-    public long getFood_id() {
+    public String getFood_id() {
         return food_id;
     }
 
-    public void setFood_id(long food_id) {
+    public void setFood_id(String food_id) {
         this.food_id = food_id;
     }
 
-    public double getInvoice_date() {
+    public Date getInvoice_date() {
         return invoice_date;
     }
 
-    public void setInvoice_date(double invoice_date) {
+    public void setInvoice_date(Date invoice_date) {
         this.invoice_date = invoice_date;
     }
 
-    public double getInvoice_time() {
+    public Time getInvoice_time() {
         return invoice_time;
     }
 
-    public void setInvoice_time(double invoice_time) {
+    public void setInvoice_time(Time invoice_time) {
         this.invoice_time = invoice_time;
+    }
+
+    public Double getTotal() {
+        return total;
+    }
+
+    public void setTotal(Double total) {
+        this.total = total;
     }
 }

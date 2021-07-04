@@ -20,11 +20,11 @@ public class TransactionService {
         repo.save(transaction);
     }
 
-    public Transaction get(long id) {
+    public Transaction get(Integer id) {
         return repo.findById(id).get();
     }
 
-    public void delete(long id) {
+    public void delete(Integer id) {
         repo.deleteById(id);
     }
 }

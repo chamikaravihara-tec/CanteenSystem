@@ -20,11 +20,11 @@ public class InvoiceService {
         repo.save(invoice);
     }
 
-    public Invoice get(long id) {
+    public Invoice get(String id) {
         return repo.findById(id).get();
     }
 
-    public void delete(long id) {
+    public void delete(String id) {
         repo.deleteById(id);
     }
 }
