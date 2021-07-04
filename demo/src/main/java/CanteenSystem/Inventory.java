@@ -104,5 +104,6 @@ import java.util.Date;
     public void setImage(Blob image) {
         this.image = image;
     }
+    
 }
 
