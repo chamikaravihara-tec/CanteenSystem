@@ -22,6 +22,40 @@ public class HomeController {
     @RequestMapping("/User_Create")
     public String getCreateUser(Model model){return "canteensystemWeb/forms/User_Create";}
 
+    @RequestMapping("/User_Update")
+    public String getUpdateUser(Model model)
+    {
+        return "canteensystemWeb/forms/Edit_User";
+    }
+
+    @RequestMapping("/User_Delete")
+    public String getDeleteUser(Model model)
+    {
+        return "canteensystemWeb/forms/Delete_User";
+    }
+
+    @RequestMapping("/New_Product")
+    public String getNewProduct(Model model)
+    {
+        return "canteensystemWeb/forms/New_Product";
+    }
+    @RequestMapping("/Edit_Product")
+    public String getEditProduct(Model model)
+    {
+        return "canteensystemWeb/forms/Edit_Product";
+    }
+
+    @RequestMapping("/Delete_Product")
+    public String getDeleteProduct(Model model)
+    {
+        return "canteensystemWeb/forms/Delete_product";
+    }
+
+    @RequestMapping("/Logout")
+    public String getLogOut(Model model)
+    {
+        return "canteensystemWeb/index";
+    }
     @RequestMapping("/Menu")
         public String getMenu(Model model)
     {
@@ -34,5 +68,34 @@ public class HomeController {
         return "canteensystemWeb/contact";
     }
 
+    @RequestMapping("/Account")
+    public String getAccount(Model model)
+    {
+        return "canteensystemWeb/account";
+    }
+
+    @RequestMapping("/Inventory")
+    public String getInventory(Model model)
+    {
+        return "canteensystemWeb/inventory";
+    }
+
+    @RequestMapping("/Admin")
+    public String getAdmin(Model model)
+    {
+        return "canteensystemWeb/admin";
+    }
+
+    @RequestMapping("/Home")
+    public String getUser(Model model)
+    {
+        return "canteensystemWeb/home";
+    }
+
+    @RequestMapping("/CanteenOwner")
+    public String getOwner(Model model)
+    {
+        return "canteensystemWeb/canteenowner";
+    }
 
 }
