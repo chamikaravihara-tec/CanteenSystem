@@ -23,7 +23,7 @@ public interface OrderRepository extends JpaRepository<orders, String> {
 
     //Update Order
     @Transactional
-    @Procedure(procedureName = "")
+    @Procedure(procedureName = "update_orders")
     void getEditOrder(String order_id, String user_id, Double total, int quantity, Date order_date, Time order_time, Integer item_id);
 
     //Delete Order

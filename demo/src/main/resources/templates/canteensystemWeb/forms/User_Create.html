@@ -1,9 +1,9 @@
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>User Create</title>
 </head>
 <body>
-<form name="User create" method="post">
+<form name="User Create" method="post" th:action="@{/User_Create}" class="">
     <table width="40%" bgcolor="0099CC" align="center">
 
         <tr>
@@ -12,7 +12,7 @@
 
         <tr>
             <td>User ID:</td>
-            <td><input type="text" size=25 name="userid"></td>
+            <td><input type="text" size=25 name="id"></td>
         </tr>
 
         <tr>
@@ -31,11 +31,6 @@
         </tr>
 
         <tr>
-            <td>Password:</td>
-            <td><input type="password" size=25 name="password"></td>
-        </tr>
-
-        <tr>
             <td>Email:</td>
             <td><input type="email" size=25 name="email"></td>
         </tr>
@@ -44,6 +39,13 @@
             <td>Phone No:</td>
             <td><input type="number" size=25 name="phone"></td>
         </tr>
+
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" size=25 name="password"></td>
+        </tr>
+
+
         <tr>
             <td>User Type:</td>
             <td><select id="User" name="User">

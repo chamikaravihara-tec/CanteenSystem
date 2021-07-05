@@ -84,6 +84,17 @@ public class HomeController {
     {
         return "canteensystemWeb/forms/Delete_product";
     }
+    @RequestMapping("/View_Food")
+    public String getAllFood(Model model){ return "canteensystemWeb/forms/View_Food";}
+
+    @RequestMapping("/Delete_Food")
+    public String getDeleteFood(Model model){ return "canteensystemWeb/forms/Delete_Food";}
+
+    @RequestMapping("/Edit_Food")
+    public String getEditFood(Model model){ return "canteensystemWeb/forms/Edit_Food";}
+
+    @RequestMapping("/New_Food")
+    public String getNewFood(Model model){return "canteensystemWeb/forms/New_Food";}
 
     @RequestMapping("/View_Order")
     public String getAllOrder(Model model){ return "canteensystemWeb/forms/View_Order";}

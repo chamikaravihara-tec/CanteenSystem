@@ -1,9 +1,9 @@
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Create New Order</title>
 </head>
 <body>
-<form name="Create New Order" method="post">
+<form name="Create New Order" method="post" th:action="@{/Create_Order}" class="">
     <table width="40%" bgcolor="0099CC" align="center">
 
         <tr>
@@ -28,6 +28,21 @@
         <tr>
             <td>Order Time:</td>
             <td><input type="time" size=25 name="order_time"></td>
+        </tr>
+
+        <tr>
+            <td>Item Id:</td>
+            <td><input type="int" size=25 name="item_id"></td>
+        </tr>
+
+        <tr>
+            <td>Quantity:</td>
+            <td><input type="int" size=25 name="quantity"></td>
+        </tr>
+
+        <tr>
+            <td>Price:</td>
+            <td><input type="int" size=25 name="total"></td>
         </tr>
 
 

@@ -17,7 +17,7 @@ public interface FoodItemRepository extends JpaRepository<Food, String> {
     void getNewFoodItem(String foods_id, String intem_id, String food_name, String type, String category, Integer quantity, Double price, Time meal_time, Blob image);
 
     //Get All Food Item
-    @Query(value = "SELECT * FROM //", nativeQuery = true)
+    @Query(value = "SELECT * FROM ", nativeQuery = true)
     List<Food> getAllFoodItem();
 
     //Update Food Item

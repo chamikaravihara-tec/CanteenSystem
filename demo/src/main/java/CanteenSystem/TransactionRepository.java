@@ -16,7 +16,7 @@ public interface TransactionRepository extends JpaRepository<Transaction, Intege
     void getNewTransaction(Integer transaction_id,Integer order_id, String intem_id, Date transaction_date,Float order_amount);
 
     //Get All Items
-    @Query(value = "SELECT * FROM //", nativeQuery = true)
+    @Query(value = "SELECT * FROM check_transactions", nativeQuery = true)
     List<Transaction> getAllTransaction();
 
     //Update Items

@@ -15,7 +15,7 @@ public interface InventoryRepository extends JpaRepository<Inventory, String> {
 
     //Insert Item
     @Transactional
-    @Procedure(procedureName = "")
+    @Procedure(procedureName = "insert_inventory")
     void getNewProduct(String intem_id, String item_name, Integer quantity, Double price, Date expired_date, String supplier_name, Date supply_date, Date manufactured_date, String product_name, Blob image);
 
     //Get All Items
@@ -24,7 +24,7 @@ public interface InventoryRepository extends JpaRepository<Inventory, String> {
 
     //Update Items
     @Transactional
-    @Procedure(procedureName = "")
+    @Procedure(procedureName = "update_inventory")
     void getEditProduct(String intem_id,String item_name,Integer quantity,Double price,Date expired_date,String supplier_name,Date supply_date,Date manufactured_date,String product_name,Blob image);
 
     //Delete Items

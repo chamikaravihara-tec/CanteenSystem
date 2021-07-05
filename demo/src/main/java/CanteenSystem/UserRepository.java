@@ -13,7 +13,7 @@ public interface UserRepository extends JpaRepository<User, String> {
 
     //Insert User
     @Transactional
-    @Procedure(procedureName = "")
+    @Procedure(procedureName = "add_user")
     void getCreateUser(String id,String fname,String lname,String username,String email,Integer phone,String password,String usertype);
 
     //Login User
@@ -31,6 +31,6 @@ public interface UserRepository extends JpaRepository<User, String> {
 
     //Delete Users
     @Transactional
-    @Procedure(procedureName = "")
+    @Procedure(procedureName = "delete_user")
     void getDeleteUser(String id,String username,String password );
 }
