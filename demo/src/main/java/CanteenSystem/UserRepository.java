@@ -26,7 +26,7 @@ public interface UserRepository extends JpaRepository<User, String> {
 
     //Update Users
     @Transactional
-    @Procedure(procedureName = "")
+    @Procedure(procedureName = "update_user")
     void getUpdateUser(String id,String fname,String lname,String username,String email,Integer phone,String password,String usertype);
 
     //Delete Users

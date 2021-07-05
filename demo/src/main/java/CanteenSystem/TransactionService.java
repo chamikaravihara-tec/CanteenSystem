@@ -14,24 +14,24 @@ public class TransactionService {
     private TransactionRepository Transaction_repository;
 
     //Create Transaction
-    //public boolean addTransaction(Integer t_transaction_id, Integer t_order_id, String t_intem_id, Date t_transaction_date,Double t_order_amount) {
-        //Transaction_repository.getCreateTransaction(t_transaction_id,t_order_id,t_intem_id,t_transaction_date,t_order_amount);
-       //return true;
-    //}
+    public boolean addTransaction(Integer t_transaction_id, Integer t_order_id, String t_intem_id, Date t_transaction_date,Float t_order_amount) {
+        Transaction_repository.getNewTransaction(t_transaction_id,t_order_id,t_intem_id,t_transaction_date,t_order_amount);
+       return true;
+    }
 
     //View All Transaction
-    //public List<User> getAllTransaction(){
-       // return Transaction_repository.getAllTransaction();
-    //}
+    public List<Transaction> getAllTransaction(){
+        return Transaction_repository.getAllTransaction();
+    }
 
     //Update Transaction
-    //public void updateTransaction(Integer t_transaction_id, Integer t_order_id, String t_intem_id, Date t_transaction_date,Double t_order_amount){
-        //Transaction_repository.getUpdateTransaction(t_transaction_id,t_order_id,t_intem_id,t_transaction_date,t_order_amount);
-    //}
+    public void updateTransaction(Integer t_transaction_id, Integer t_order_id, String t_intem_id, Date t_transaction_date,Float t_order_amount){
+        Transaction_repository.getEditTransaction(t_transaction_id,t_order_id,t_intem_id,t_transaction_date,t_order_amount);
+    }
 
     //Delete Transaction
-    //public void deleteTransaction(Integer t_transaction_id, Integer t_order_id, String t_intem_id,Double t_order_amount){
-       // Transaction_repository.getDeleteTransaction(t_transaction_id,t_order_id,t_intem_id,t_order_amount);
-   // }
+    public void deleteTransaction(Integer t_transaction_id, Integer t_order_id, String t_intem_id){
+        Transaction_repository.getDeleteTransaction(t_transaction_id,t_order_id,t_intem_id);
+    }
 
 }

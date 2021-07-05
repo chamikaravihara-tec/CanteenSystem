@@ -29,7 +29,7 @@ public interface OrderRepository extends JpaRepository<orders, String> {
     //Delete Order
     @Transactional
     @Procedure(procedureName = "")
-    void getDeleteOrder(String order_id, String user_id,int quantity,Integer item_id);
+    void getDeleteOrder(String order_id, String user_id,int quantity);
 }
 
 

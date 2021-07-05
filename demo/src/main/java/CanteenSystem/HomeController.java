@@ -1,5 +1,6 @@
 package CanteenSystem;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,38 +11,41 @@ import java.util.Objects;
 
 @Controller
 public class HomeController {
+    @Autowired
+    private UserService userService;
 
-    @RequestMapping("/Login" )
-    public String getLogin(Model model)
-    {
+    @RequestMapping("/Login")
+    public String getLogin(Model model) {
         return "canteensystemWeb/forms/Login";
     }
-    @RequestMapping("/" )
-    public String getIndex(Model model)
-    {
+
+    @RequestMapping("/")
+    public String getIndex(Model model) {
         return "canteensystemWeb/index";
     }
 
     //Login User
-    //@PostMapping("/Login")
-    //public String login(@RequestParam("email")String u_email,@RequestParam("password")String u_password){
-       // User user = UserService.loginUser(u_email,u_password);
-       // if (Objects.nonNull(user)){
-           // String u_usertype = user.getUsertype();
-           // if (u_usertype == Admin){
-           //     return "canteensystemWeb/admin";
-           // }
-           // else if (u_usertype == Staff){
-            //    return "canteensystemWeb/home";
-          //  }
-          //  else if (u_usertype == Student){
-           //     return "canteensystemWeb/home";
-           // }
-           // else{
-           //     return "canteensystemWeb/owner";
-         //   }
-       // }
-  //  }
+    @PostMapping("/Login")
+    public String login(@RequestParam("email") String u_email, @RequestParam("password") String u_password) {
+        User user = userService.loginUser(u_email, u_password);
+        if (Objects.nonNull(user)) {
+            String u_usertype = user.getUsertype();
+            if (u_usertype == "Admin") {
+                return "canteensystemWeb/admin";
+            } else if (u_usertype == "Staff") {
+                return "canteensystemWeb/home";
+            } else if (u_usertype == "Student") {
+                return "canteensystemWeb/home";
+            } else {
+                return "canteensystemWeb/owner";
+            }
+
+        } return "";
+    }
+
+
+
+
     @RequestMapping("/View_User")
     public String getAllUsers(Model model) { return "canteensystemWeb/forms/View_User"; }
 

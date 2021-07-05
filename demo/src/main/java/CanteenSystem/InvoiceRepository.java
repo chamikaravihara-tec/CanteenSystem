@@ -28,5 +28,5 @@ public interface InvoiceRepository extends JpaRepository<Invoice, String> {
     //Delete Invoice
     @Transactional
     @Procedure(procedureName = "")
-    void getDeleteInvoice(String invoice_id,String user_id,String food_id,Double total);
+    void getDeleteInvoice(String invoice_id,String user_id,String food_id);
 }

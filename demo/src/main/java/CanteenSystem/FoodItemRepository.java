@@ -28,5 +28,5 @@ public interface FoodItemRepository extends JpaRepository<Food, String> {
     //Delete Food Item
     @Transactional
     @Procedure(procedureName = "")
-    void getDeleteFoodItem(String foods_id,String intem_id,String food_name,String type,Integer quantity);
+    void getDeleteFoodItem(String foods_id,String intem_id,String food_name,Integer quantity);
 }

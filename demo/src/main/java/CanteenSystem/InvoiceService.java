@@ -15,23 +15,23 @@ public class InvoiceService {
     private InvoiceRepository invoice_Repository;
 
     //Create Invoice
-    //public boolean addInvoice(String i_invoice_id, String i_user_id, String i_food_id, Date i_invoice_date, Time i_invoice_time, Double i_total) {
-        //invoice_Repository.getNewInvoice(i_invoice_id,i_user_id,i_food_id,i_invoice_date,i_invoice_time,i_total);
-       // return true;
-   // }
+    public boolean addInvoice(String i_invoice_id, String i_user_id, String i_food_id, Date i_invoice_date, Time i_invoice_time, Double i_total) {
+        invoice_Repository.getNewInvoice(i_invoice_id,i_user_id,i_food_id,i_invoice_date,i_invoice_time,i_total);
+        return true;
+    }
 
     //View All Invoice
-    //public List<Invoice> getAllInvoice(){
-        //return invoice_Repository.getAllInvoice();
-    //}
+    public List<Invoice> getAllInvoice(){
+        return invoice_Repository.getAllInvoice();
+    }
 
     //Update Invoice
-    //public void invoiceUpdate(String i_invoice_id, String i_user_id, String i_food_id, Date i_invoice_date, Time i_invoice_time, Double i_total){
-        //invoice_Repository.getEditInvoice(i_invoice_id,i_user_id,i_food_id,i_invoice_date,i_invoice_time,i_total);
-    //}
+    public void invoiceUpdate(String i_invoice_id, String i_user_id, String i_food_id, Date i_invoice_date, Time i_invoice_time, Double i_total){
+        invoice_Repository.getEditInvoice(i_invoice_id,i_user_id,i_food_id,i_invoice_date,i_invoice_time,i_total);
+    }
 
     //Delete Invoice
-    //public void deleteInvoice(String i_invoice_id,String i_user_id,String i_food_id){
-        //invoice_Repository.getDeleteInvoice(i_invoice_id,i_user_id,i_food_id);
-   // }
+    public void deleteInvoice(String i_invoice_id,String i_user_id,String i_food_id){
+        invoice_Repository.getDeleteInvoice(i_invoice_id,i_user_id,i_food_id);
+    }
 }
