@@ -4,27 +4,34 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.Date;
 import java.util.List;
 
 @Service
 @Transactional
 public class TransactionService {
     @Autowired
-    private TransactionRepository repo;
+    private TransactionRepository Transaction_repository;
 
-    public List<Transaction> listAll() {
-        return repo.findAll();
-    }
+    //Create Transaction
+    //public boolean addTransaction(Integer t_transaction_id, Integer t_order_id, String t_intem_id, Date t_transaction_date,Double t_order_amount) {
+        //Transaction_repository.getCreateTransaction(t_transaction_id,t_order_id,t_intem_id,t_transaction_date,t_order_amount);
+       //return true;
+    //}
 
-    public void save(Transaction transaction) {
-        repo.save(transaction);
-    }
+    //View All Transaction
+    //public List<User> getAllTransaction(){
+       // return Transaction_repository.getAllTransaction();
+    //}
 
-    public Transaction get(Integer id) {
-        return repo.findById(id).get();
-    }
+    //Update Transaction
+    //public void updateTransaction(Integer t_transaction_id, Integer t_order_id, String t_intem_id, Date t_transaction_date,Double t_order_amount){
+        //Transaction_repository.getUpdateTransaction(t_transaction_id,t_order_id,t_intem_id,t_transaction_date,t_order_amount);
+    //}
 
-    public void delete(Integer id) {
-        repo.deleteById(id);
-    }
+    //Delete Transaction
+    //public void deleteTransaction(Integer t_transaction_id, Integer t_order_id, String t_intem_id,Double t_order_amount){
+       // Transaction_repository.getDeleteTransaction(t_transaction_id,t_order_id,t_intem_id,t_order_amount);
+   // }
+
 }
