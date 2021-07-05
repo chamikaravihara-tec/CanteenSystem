@@ -2,8 +2,11 @@ package CanteenSystem;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Objects;
 
 @Controller
 public class HomeController {
@@ -19,6 +22,26 @@ public class HomeController {
         return "canteensystemWeb/index";
     }
 
+    //Login User
+    //@PostMapping("/Login")
+    //public String login(@RequestParam("email")String u_email,@RequestParam("password")String u_password){
+       // User user = UserService.loginUser(u_email,u_password);
+       // if (Objects.nonNull(user)){
+           // String u_usertype = user.getUsertype();
+           // if (u_usertype == Admin){
+           //     return "canteensystemWeb/admin";
+           // }
+           // else if (u_usertype == Staff){
+            //    return "canteensystemWeb/home";
+          //  }
+          //  else if (u_usertype == Student){
+           //     return "canteensystemWeb/home";
+           // }
+           // else{
+           //     return "canteensystemWeb/owner";
+         //   }
+       // }
+  //  }
     @RequestMapping("/User_Create")
     public String getCreateUser(Model model){return "canteensystemWeb/forms/User_Create";}
 
@@ -95,7 +118,7 @@ public class HomeController {
     @RequestMapping("/CanteenOwner")
     public String getOwner(Model model)
     {
-        return "canteensystemWeb/canteenowner";
+        return "canteensystemWeb/owner";
     }
 
 }
