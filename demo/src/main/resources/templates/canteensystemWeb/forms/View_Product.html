@@ -1,10 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>User Create</title>
 </head>
 <body>
+<form name="User create" method="post">
+    <table width="40%" bgcolor="0099CC" align="center">
+
+        <tr>
+            <td colspan=2><center><font size=4><b>User Create Page</b></font></center></td>
+        </tr>
+
+        <thead>
+        <tr>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Expire Date</th>
+            <th>Supplier Name</th>
+            <th>Supply Date</th>
+            <th>Manufacture Date</th>
+            <th>Product Name</th>
+            <th>Image</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user:${viewproduct}"></tr>
+        <td th:text="${user.getProduct_item_name()}"></td>
+        <td th:text="${user.getProduct_quantity()}"></td>
+        <td th:text="${user.getProduct_price()}"></td>
+        <td th:text="${user.getProduct_expire_date()}"></td>
+        <td th:text="${user.getProduct_supplier_name()}"></td>
+        <td th:text="${user.getProduct_supply_date()}"></td>
+        <td th:text="${user.getProduct_manufacture_date()}"></td>
+        <td th:text="${user.getProduct_image()}"></td>
+        <td class="text-center">
+            <form action="" method="post">
+
+            </form>
+        </td>
+        </tbody>
+
+
+        <tr>
+            <td ><input type="Reset"></td>
+
+        </tr>
+
+    </table>
+</form>
+
 
 </body>
 </html>

@@ -1,10 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>User Create</title>
 </head>
 <body>
+<form name="User create" method="post">
+    <table width="40%" bgcolor="0099CC" align="center">
+
+        <tr>
+            <td colspan=2><center><font size=4><b>User Create Page</b></font></center></td>
+        </tr>
+
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Password</th>
+            <th>User Type</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user:${viewusers}"></tr>
+            <td th:text="${user.getUser_id()}"></td>
+            <td th:text="${user.getUser_fname()}"></td>
+            <td th:text="${user.getUser_lname()}"></td>
+            <td th:text="${user.getUser_username()}"></td>
+            <td th:text="${user.getUser_email()}"></td>
+            <td th:text="${user.getUser_phone()}"></td>
+            <td th:text="${user.getUser_password()}"></td>
+            <td th:text="${user.getUser_usertype()}"></td>
+        <td class="text-center">
+            <form action="" method="post">
+
+            </form>
+        </td>
+        </tbody>
+
+
+        <tr>
+            <td ><input type="Reset"></td>
+
+        </tr>
+
+    </table>
+</form>
+
 
 </body>
 </html>

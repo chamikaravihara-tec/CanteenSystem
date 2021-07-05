@@ -1,10 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>User Create</title>
 </head>
 <body>
+<form name="User create" method="post">
+    <table width="40%" bgcolor="0099CC" align="center">
+
+        <tr>
+            <td colspan=2><center><font size=4><b>User Create Page</b></font></center></td>
+        </tr>
+
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Intem Id</th>
+            <th>Food Name</th>
+            <th>Type</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Meal Time</th>
+            <th>Image</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="food:${viewusers}"></tr>
+        <td th:text="${user.getFood_foods_id()}"></td>
+        <td th:text="${user.getFood_intem_id()}"></td>
+        <td th:text="${user.getFood_food_name()}"></td>
+        <td th:text="${user.getFood_type()}"></td>
+        <td th:text="${user.getFood_category()}"></td>
+        <td th:text="${user.getFood_quantity()}"></td>
+        <td th:text="${user.getFood_price()}"></td>
+        <td th:text="${user.getFood_meal_time()}"></td>
+        <td th:text="${user.getFood_image()}"></td>
+        <td class="text-center">
+            <form action="" method="post">
+
+            </form>
+        </td>
+        </tbody>
+
+
+        <tr>
+            <td ><input type="Reset"></td>
+
+        </tr>
+
+    </table>
+</form>
+
 
 </body>
 </html>

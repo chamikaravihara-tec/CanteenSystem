@@ -1,10 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>User Create</title>
 </head>
 <body>
+<form name="User create" method="post">
+    <table width="40%" bgcolor="0099CC" align="center">
+
+        <tr>
+            <td colspan=2><center><font size=4><b>User Create Page</b></font></center></td>
+        </tr>
+
+        <thead>
+        <tr>
+            <th>Invoice ID</th>
+            <th>User ID</th>
+            <th>Food ID</th>
+            <th>Invoice Date</th>
+            <th>Invoice Time</th>
+            <th>Total</th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user:${viewinvoice}"></tr>
+        <td th:text="${user.getInvoice_invoice_id()}"></td>
+        <td th:text="${user.getInvoice_user_id()}"></td>
+        <td th:text="${user.getInvoice_food_id()}"></td>
+        <td th:text="${user.getInvoice_invoice_date()}"></td>
+        <td th:text="${user.getInvoice_invoice_time()}"></td>
+        <td th:text="${user.getInvoice_total()}"></td>
+
+        <td class="text-center">
+            <form action="" method="post">
+
+            </form>
+        </td>
+        </tbody>
+
+
+        <tr>
+            <td ><input type="Reset"></td>
+
+        </tr>
+
+    </table>
+</form>
+
 
 </body>
 </html>
