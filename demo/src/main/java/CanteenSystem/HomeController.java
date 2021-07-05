@@ -42,6 +42,9 @@ public class HomeController {
          //   }
        // }
   //  }
+    @RequestMapping("/View_User")
+    public String getAllUsers(Model model) { return "canteensystemWeb/forms/View_User"; }
+
     @RequestMapping("/User_Create")
     public String getCreateUser(Model model){return "canteensystemWeb/forms/User_Create";}
 
@@ -57,11 +60,15 @@ public class HomeController {
         return "canteensystemWeb/forms/Delete_User";
     }
 
+    @RequestMapping("/View_Product")
+    public String getAllProduct(Model model) {return "canteensystemWeb/forms/View_Product"; }
+
     @RequestMapping("/New_Product")
     public String getNewProduct(Model model)
     {
         return "canteensystemWeb/forms/New_Product";
     }
+
     @RequestMapping("/Edit_Product")
     public String getEditProduct(Model model)
     {
@@ -74,51 +81,60 @@ public class HomeController {
         return "canteensystemWeb/forms/Delete_product";
     }
 
+    @RequestMapping("/View_Order")
+    public String getAllOrder(Model model){ return "canteensystemWeb/forms/View_Order";}
+
+    @RequestMapping("/Create_Order")
+    public String getNewOrder(Model model){ return "canteensystemWeb/forms/Create_Order";}
+
+    @RequestMapping("/Edit_Order")
+    public String getEditOrder(Model model){ return "canteensystemWeb/forms/Edit_Order";}
+
+    @RequestMapping("/Delete_Order")
+    public String getDeleteOrder(Model model){ return "canteensystemWeb/forms/Delete_Order";}
+
+    @RequestMapping("/View_Invoice")
+    public String getAllInvoice(Model model){ return "canteensystemWeb/forms/View_Invoice";}
+
+    @RequestMapping("/Invoice")
+    public String getNewInvoice(Model model){ return "canteensystemWeb/forms/Invoice";}
+
+    @RequestMapping("/Edit_Invoice")
+    public String getEditInvoice(Model model){ return "canteensystemWeb/forms/Edit_Invoice";}
+
+    @RequestMapping("/Delete_invoice")
+    public String getDeleteInvoice(Model model){ return "canteensystemWeb/forms/Delete_Invoice";}
+
     @RequestMapping("/Logout")
-    public String getLogOut(Model model)
-    {
-        return "canteensystemWeb/index";
-    }
+    public String getLogOut(Model model) { return "canteensystemWeb/index"; }
+
     @RequestMapping("/Menu")
-        public String getMenu(Model model)
-    {
-        return "canteensystemWeb/menu";
-    }
+        public String getMenu(Model model) { return "canteensystemWeb/menu"; }
 
     @RequestMapping("/Contact")
-    public String getOrder(Model model)
-    {
-        return "canteensystemWeb/contact";
-    }
+    public String getOrder(Model model) { return "canteensystemWeb/contact"; }
 
     @RequestMapping("/Account")
-    public String getAccount(Model model)
-    {
-        return "canteensystemWeb/account";
-    }
+    public String getAccount(Model model) { return "canteensystemWeb/account"; }
 
     @RequestMapping("/Inventory")
-    public String getInventory(Model model)
-    {
-        return "canteensystemWeb/inventory";
-    }
+    public String getInventory(Model model) { return "canteensystemWeb/inventory"; }
 
     @RequestMapping("/Admin")
-    public String getAdmin(Model model)
-    {
-        return "canteensystemWeb/admin";
-    }
+    public String getAdmin(Model model) { return "canteensystemWeb/admin"; }
+
+    @RequestMapping("/invoice")
+    public String getInvoice(Model model){ return "canteensystemWeb/invoice";}
+
+    @RequestMapping("/Order")
+    public String getOrderPage(Model model){ return "canteensystemWeb/order";}
 
     @RequestMapping("/Home")
-    public String getUser(Model model)
-    {
-        return "canteensystemWeb/home";
-    }
+    public String getUser(Model model) { return "canteensystemWeb/home"; }
 
     @RequestMapping("/CanteenOwner")
-    public String getOwner(Model model)
-    {
-        return "canteensystemWeb/owner";
-    }
+    public String getOwner(Model model) { return "canteensystemWeb/owner"; }
+
+
 
 }
