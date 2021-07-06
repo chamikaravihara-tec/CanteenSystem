@@ -3,12 +3,15 @@ package CanteenSystem;
 import org.hibernate.criterion.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.transaction.Transactional;
 import java.sql.Blob;
 import java.sql.Time;
 import java.util.Date;
@@ -132,7 +135,24 @@ public class HomeController {
         return "canteensystemWeb/forms/View_Invoice";
     }
 
-    
+    //Delete user
+    @RequestMapping("/canteensystemWeb/forms/Delete_User/{id}")
+    public String deleteUser(@PathVariable("id") String id){
+        boolean result = userService.deleteUser(id);
+        if (result)
+            return "redirect:/canteensystemWeb/forms/View_User";
+        else
+            return "redirect:/canteensystemWeb/forms/Delete_User";
+    }
+
+    //Update users
+    //@PostMapping("/userUpdate")
+    //public String getUpdateUser(@RequestParam("id") String id, @RequestParam("fname") String fname, @RequestParam("lname") Float lname, @RequestParam("username") String username ,@RequestParam("email") String email ,@RequestParam("phone") int phone){
+        //userService.userUpdate(id, fname,lname,username,email,phone);
+        //return "canteensystemWeb/forms/Edit_User";
+    //}
+
+
 
 
 

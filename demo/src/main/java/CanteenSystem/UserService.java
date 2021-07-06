@@ -33,8 +33,15 @@ public class UserService {
     }
 
     //Delete User
-    public void deleteUser(String u_id,String u_username,String u_password){
-        repo.getDeleteUser(u_id,u_username,u_password);
+    public boolean deleteUser(String u_id){
+        repo.getDeleteUser(u_id);
+        return false;
     }
+
+    //get user
+    public User getUser(String u_id){
+        return repo.findById(u_id).get();
+    }
+
 
 }

@@ -32,5 +32,5 @@ public interface UserRepository extends JpaRepository<User, String> {
     //Delete Users
     @Transactional
     @Procedure(procedureName = "delete_user")
-    void getDeleteUser(String id,String username,String password );
+    void getDeleteUser(String id);
 }
