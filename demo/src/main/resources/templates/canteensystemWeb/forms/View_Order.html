@@ -24,14 +24,14 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="user:${vieworders}"></tr>
-        <td th:text="${user.getOrder_order_id()}"></td>
-        <td th:text="${user.getOrder_user_id()}"></td>
-        <td th:text="${user.getOrder_total()}"></td>
-        <td th:text="${user.getOrder_quantity()}"></td>
-        <td th:text="${user.getOrder_order_date()}"></td>
-        <td th:text="${user.getOrder_order_time()}"></td>
-        <td th:text="${user.getOrder_item_id()}"></td>
+        <tr th:each="user:${viewOrders}"></tr>
+        <td th:text="${user.getOrder_id()}"></td>
+        <td th:text="${user.getUser_id()}"></td>
+        <td th:text="${user.getTotal()}"></td>
+        <td th:text="${user.getQuantity()}"></td>
+        <td th:text="${user.getOrder_date()}"></td>
+        <td th:text="${user.getOrder_time()}"></td>
+        <td th:text="${user.getItem_id()}"></td>
         <td class="text-center">
             <form action="" method="post">
 

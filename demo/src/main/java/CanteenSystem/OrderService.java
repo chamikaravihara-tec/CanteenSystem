@@ -22,17 +22,17 @@ public class OrderService {
     }
 
     //View All Orders
-    public List<Order> getAllUser(){
+    public List<Order> getAllOrders(){
         return order_repository.getAllOrders();
     }
 
     //Update Order
-    public void userUpdate(String o_order_id, String o_user_id, Double o_total, int o_quantity, Date o_order_date, Time o_order_time, Integer o_item_id){
+    public void orderUpdate(String o_order_id, String o_user_id, Double o_total, int o_quantity, Date o_order_date, Time o_order_time, Integer o_item_id){
         order_repository.getEditOrder(o_order_id,o_user_id,o_total,o_quantity,o_order_date,o_order_time,o_item_id);
     }
 
     //Delete Order
-    public void deleteUser(String o_order_id, String o_user_id,int o_quantity){
+    public void deleteOrder(String o_order_id, String o_user_id,int o_quantity){
         order_repository.getDeleteOrder(o_order_id,o_user_id,o_quantity);
     }
 }

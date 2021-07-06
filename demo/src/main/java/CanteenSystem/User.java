@@ -3,10 +3,10 @@ package CanteenSystem;
 import javax.persistence.*;
 
 @Entity
-
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private String id;
     private String fname;
     private String lname;

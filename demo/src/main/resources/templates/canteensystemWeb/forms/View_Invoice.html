@@ -23,13 +23,13 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="user:${viewinvoice}"></tr>
-        <td th:text="${user.getInvoice_invoice_id()}"></td>
-        <td th:text="${user.getInvoice_user_id()}"></td>
-        <td th:text="${user.getInvoice_food_id()}"></td>
-        <td th:text="${user.getInvoice_invoice_date()}"></td>
-        <td th:text="${user.getInvoice_invoice_time()}"></td>
-        <td th:text="${user.getInvoice_total()}"></td>
+        <tr th:each="user:${viewInvoices}"></tr>
+        <td th:text="${user.getInvoice_id()}"></td>
+        <td th:text="${user.getUser_id()}"></td>
+        <td th:text="${user.getFood_id()}"></td>
+        <td th:text="${user.getInvoice_date()}"></td>
+        <td th:text="${user.getInvoice_time()}"></td>
+        <td th:text="${user.getTotal()}"></td>
 
         <td class="text-center">
             <form action="" method="post">

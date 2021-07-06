@@ -24,15 +24,17 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="user:${viewproduct}"></tr>
-        <td th:text="${user.getProduct_item_name()}"></td>
-        <td th:text="${user.getProduct_quantity()}"></td>
-        <td th:text="${user.getProduct_price()}"></td>
-        <td th:text="${user.getProduct_expire_date()}"></td>
-        <td th:text="${user.getProduct_supplier_name()}"></td>
-        <td th:text="${user.getProduct_supply_date()}"></td>
-        <td th:text="${user.getProduct_manufacture_date()}"></td>
-        <td th:text="${user.getProduct_image()}"></td>
+        <tr th:each="user:${viewInventory}"></tr>
+        <td th:text="${user.getIntem_id()}"></td>
+        <td th:text="${user.getItem_name()}"></td>
+        <td th:text="${user.getQuantity()}"></td>
+        <td th:text="${user.getPrice()}"></td>
+        <td th:text="${user.getExpired_date()}"></td>
+        <td th:text="${user.getSupplier_name()}"></td>
+        <td th:text="${user.getSupply_date()}"></td>
+        <td th:text="${user.getManufactured_date()}"></td>
+        <td th:text="${user.getProduct_name()}"></td>
+        <td th:text="${user.getImage()}"></td>
         <td class="text-center">
             <form action="" method="post">
 

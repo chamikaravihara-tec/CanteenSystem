@@ -24,15 +24,15 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="user:${viewusers}"></tr>
-            <td th:text="${user.getUser_id()}"></td>
-            <td th:text="${user.getUser_fname()}"></td>
-            <td th:text="${user.getUser_lname()}"></td>
-            <td th:text="${user.getUser_username()}"></td>
-            <td th:text="${user.getUser_email()}"></td>
-            <td th:text="${user.getUser_phone()}"></td>
-            <td th:text="${user.getUser_password()}"></td>
-            <td th:text="${user.getUser_usertype()}"></td>
+        <tr th:each="user:${viewUser}"></tr>
+            <td th:text="${user.getId()}"></td>
+            <td th:text="${user.getFname()}"></td>
+            <td th:text="${user.getLname()}"></td>
+            <td th:text="${user.getUsername()}"></td>
+            <td th:text="${user.getEmail()}"></td>
+            <td th:text="${user.getPhone()}"></td>
+            <td th:text="${user.getPassword()}"></td>
+            <td th:text="${user.getUsertype()}"></td>
         <td class="text-center">
             <form action="" method="post">
 
