@@ -13,8 +13,8 @@ public class UserService {
     private UserRepository repo;
 
     //Create User
-    public boolean addUser(String u_id,String u_fname,String u_lname,String u_username,String u_email,Integer u_phone,String u_password,String u_usertype) {
-        repo.getCreateUser(u_id, u_fname, u_lname, u_username, u_email, u_phone, u_password, u_usertype);
+    public boolean addUser(User user) {
+        repo.save(user);
         return true;
     }
     //Login User
@@ -39,7 +39,7 @@ public class UserService {
     }
 
     //get user
-    public User getUser(String u_id){
+    public User getUser(Integer u_id){
         return repo.findById(u_id).get();
     }
 

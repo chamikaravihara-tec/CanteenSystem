@@ -10,19 +10,19 @@ import java.util.Date;
 @Entity
 public class Invoice{
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String invoice_id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer invoice_id;
     private String user_id;
     private String food_id;
     private Date invoice_date;
     private Time invoice_time;
     private Double total;
 
-    public String getInvoice_id() {
+    public Integer getInvoice_id() {
         return invoice_id;
     }
 
-    public void setInvoice_id(String invoice_id) {
+    public void setInvoice_id(Integer invoice_id) {
         this.invoice_id = invoice_id;
     }
 

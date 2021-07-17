@@ -1,13 +1,15 @@
 package CanteenSystem;
 
 import javax.persistence.*;
+import javax.persistence.criteria.CriteriaBuilder;
+
 
 @Entity
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private String id;
+    private Integer id;
     private String fname;
     private String lname;
     private String username;
@@ -16,11 +18,11 @@ public class User {
     private String password;
     private String usertype;
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

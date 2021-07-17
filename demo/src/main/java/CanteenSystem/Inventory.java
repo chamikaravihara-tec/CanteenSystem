@@ -13,8 +13,8 @@ import java.util.Date;
 @Entity
     public class Inventory {
         @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private String intem_id;
+        @GeneratedValue(strategy = GenerationType.AUTO)
+        private Integer intem_id;
         private String item_name;
         private Integer quantity;
         private Double price;
@@ -25,11 +25,11 @@ import java.util.Date;
         private String product_name;
         private Blob image;
 
-    public String getIntem_id() {
+    public Integer getIntem_id() {
         return intem_id;
     }
 
-    public void setIntem_id(String intem_id) {
+    public void setIntem_id(Integer intem_id) {
         this.intem_id = intem_id;
     }
 

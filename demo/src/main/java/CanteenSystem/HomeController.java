@@ -2,16 +2,10 @@ package CanteenSystem;
 
 import org.hibernate.criterion.Order;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
-import javax.transaction.Transactional;
 import java.sql.Blob;
 import java.sql.Time;
 import java.util.Date;
@@ -57,14 +51,11 @@ public class HomeController {
     }
 
     //register user
-    @PostMapping("/Create_User")
-    public String addUser(@RequestParam("id") String u_id, @RequestParam("fname") String u_fname,@RequestParam("lname") String u_lname, @RequestParam("username") String u_username, @RequestParam("email") String u_email, @RequestParam("phone") Integer u_phone, @RequestParam("password") String u_password, @RequestParam("usertype") String u_usertype)
+    @PostMapping("/User_Create")
+    public String addUser(@ModelAttribute("user") User user)
     {
-        boolean result = userService.addUser(u_id, u_fname, u_lname,u_username, u_email, u_phone, u_password, u_usertype);
-        if (result)
-            return "canteensystemWeb/forms/Login";
-        else
-            return "redirect:/Create_User";
+        userService.addUser(user);
+        return "success";
     }
 
     //register Inventory
@@ -159,8 +150,12 @@ public class HomeController {
     @RequestMapping("/View_User")
     public String getAllUsers(Model model) { return "canteensystemWeb/forms/View_User"; }
 
-    @RequestMapping("/User_Create")
-    public String getCreateUser(Model model){return "canteensystemWeb/forms/User_Create";}
+    @GetMapping("/User_Create")
+    public String getCreateUser(Model model){
+        User user = new User();
+        model.addAttribute("user",user);
+        return "canteensystemWeb/forms/User_Create";
+    }
 
     @RequestMapping("/User_Update")
     public String getUpdateUser(Model model)

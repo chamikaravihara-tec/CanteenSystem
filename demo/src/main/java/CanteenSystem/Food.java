@@ -11,8 +11,8 @@ import java.sql.Time;
 @Entity
 public class Food {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String foods_id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer foods_id;
     private String intem_id;
     private String food_name;
     private String type;
@@ -22,11 +22,11 @@ public class Food {
     private Time meal_time;
     private Blob image;
 
-    public String getFoods_id() {
+    public Integer getFoods_id() {
         return foods_id;
     }
 
-    public void setFoods_id(String foods_id) {
+    public void setFoods_id(Integer foods_id) {
         this.foods_id = foods_id;
     }
 

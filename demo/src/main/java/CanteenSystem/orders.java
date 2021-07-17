@@ -8,20 +8,20 @@ import java.util.Date;
 
 public class orders {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String order_id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer order_id;
     private String user_id;
     private Double total;
-    private int quantity;
+    private Integer quantity;
     private Date order_date;
     private Time order_time;
     private Integer item_id;
 
-    public String getOrder_id() {
+    public Integer getOrder_id() {
         return order_id;
     }
 
-    public void setOrder_id(String order_id) {
+    public void setOrder_id(Integer order_id) {
         this.order_id = order_id;
     }
 
@@ -41,11 +41,11 @@ public class orders {
         this.total = total;
     }
 
-    public int getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 

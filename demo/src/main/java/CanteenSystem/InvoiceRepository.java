@@ -9,7 +9,7 @@ import java.sql.Time;
 import java.util.Date;
 import java.util.List;
 
-public interface InvoiceRepository extends JpaRepository<Invoice, String> {
+public interface InvoiceRepository extends JpaRepository<Invoice, Integer> {
 
     //Insert Invoice
     @Transactional

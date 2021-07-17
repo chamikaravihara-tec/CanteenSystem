@@ -10,7 +10,7 @@ import java.sql.Time;
 import java.util.Date;
 import java.util.List;
 
-public interface OrderRepository extends JpaRepository<orders, String> {
+public interface OrderRepository extends JpaRepository<orders, Integer> {
 
     //Insert Order
     @Transactional

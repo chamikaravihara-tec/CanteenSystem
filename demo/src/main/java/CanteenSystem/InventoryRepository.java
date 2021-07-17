@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.List;
 
 @Repository
-public interface InventoryRepository extends JpaRepository<Inventory, String> {
+public interface InventoryRepository extends JpaRepository<Inventory, Integer> {
 
     //Insert Item
     @Transactional

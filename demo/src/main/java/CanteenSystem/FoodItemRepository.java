@@ -9,7 +9,7 @@ import java.sql.Blob;
 import java.sql.Time;
 import java.util.List;
 
-public interface FoodItemRepository extends JpaRepository<Food, String> {
+public interface FoodItemRepository extends JpaRepository<Food, Integer> {
 
     //Insert food Item
     @Transactional
