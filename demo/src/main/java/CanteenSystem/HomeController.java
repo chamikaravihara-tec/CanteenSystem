@@ -54,7 +54,7 @@ public class HomeController {
     public String addUser(@ModelAttribute("user") User user)
     {
         userService.addUser(user);
-        return "success";
+        return "redirect:/";
     }
 
     //register Inventory
