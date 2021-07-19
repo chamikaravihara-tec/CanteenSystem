@@ -15,8 +15,8 @@ public class InvoiceService {
     private InvoiceRepository invoice_Repository;
 
     //Create Invoice
-    public boolean addInvoice(String i_invoice_id, String i_user_id, String i_food_id, Date i_invoice_date, Time i_invoice_time, Double i_total) {
-        invoice_Repository.getNewInvoice(i_invoice_id,i_user_id,i_food_id,i_invoice_date,i_invoice_time,i_total);
+    public boolean addInvoice(Invoice invoice) {
+        invoice_Repository.save(invoice);
         return true;
     }
 

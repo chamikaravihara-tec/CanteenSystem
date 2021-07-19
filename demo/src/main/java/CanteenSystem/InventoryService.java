@@ -14,8 +14,8 @@ public class InventoryService {
     private InventoryRepository inventory_Repository;
 
     //Create Inventory
-    public boolean addInventory(String in_intem_id, String in_item_name, Integer in_quantity, Double in_price, Date in_expired_date, String in_supplier_name, Date in_supply_date, Date in_manufactured_date, String in_product_name, Blob in_image) {
-        inventory_Repository.getNewProduct(in_intem_id,in_item_name,in_quantity,in_price,in_expired_date,in_supplier_name,in_supply_date,in_manufactured_date,in_product_name,in_image);
+    public boolean addInventory(Inventory inventory) {
+        inventory_Repository.save(inventory);
         return true;
     }
 

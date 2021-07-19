@@ -16,8 +16,8 @@ public class OrderService {
     private OrderRepository order_repository;
 
     //Create Order
-    public boolean addOrder(String o_order_id, String o_user_id, Double o_total, int o_quantity, Date o_order_date, Time o_order_time, Integer o_item_id) {
-        order_repository.getNewOrder(o_order_id,o_user_id,o_total,o_quantity,o_order_date,o_order_time,o_item_id);
+    public boolean addOrder(CanteenSystem.Order order) {
+        order_repository.save(order);
        return true;
     }
 

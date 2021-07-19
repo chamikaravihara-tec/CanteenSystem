@@ -6,7 +6,7 @@ import java.util.Date;
 
 @Entity
 
-public class orders {
+public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer order_id;
